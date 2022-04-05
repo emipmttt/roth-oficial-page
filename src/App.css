@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  background: #111;
+  overflow-x: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+main {
+  max-height: 100vh;
+  max-width: 100vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.image {
+  flex: 1;
+  max-width: 50%;
+  overflow: hidden;
+}
+
+video {
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  left:-30%;
+  filter: ;
+}
+
+.content {
+  background: #111;
+  flex: 1;
+  max-width: 40%;
+  color: white;
+  box-shadow: 0px 1px 40px 160px #111;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  padding-right: 130px;
+  height: 100vh;
+}
+
+.content-wrapper {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 40px;
+}
+
+p {
+  margin-bottom: 40px;
+}
+
+a {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 900px) {
+  main {
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+
+  .content {
+    position: absolute;
+    left: 0px;
+    top: 230px;
+    width: 100vw;
+    padding-right: 0;
+    box-sizing: border-box;
+    padding: 30px;
+    max-width: 100%;
+    box-shadow: 0px 1px 40px 60px #111;
+  }
+
+  video {
+    width: 100%;
+    position: initial;
+  }
+
+  .image {
+    width: 100vw;
+    margin: 0;
+    max-width: 100vw;
+  }
+
+  .logo {
+    width: 200px;
+    position: absolute;
+    margin-top: -200px;
+    left: calc(50% - 100px);
   }
 }

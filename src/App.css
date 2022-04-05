@@ -27,8 +27,8 @@ video {
   height: 100%;
   position: absolute;
   z-index: -1;
-  left:-30%;
-  filter: ;
+  left: -30%;
+  filter: grayscale(100%);
 }
 
 .content {
